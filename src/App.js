@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TimerLengthController from './components/TimerLengthController';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div id="clock-title" className="text-center bg-dark text-white">
+        POMODORO CLOCK
+      </div>
+      <div className="row">
+      <div className="border border-dark col-xs-3  p-2 mx-auto">
+        <TimerLengthController
+          type={'Session'} />
+      </div>
+      <div className="border border-dark col-xs-3  p-2 mx-auto">
+        <TimerLengthController type={'Break'} />
+      </div>
+      </div>
     </div>
   );
 }
