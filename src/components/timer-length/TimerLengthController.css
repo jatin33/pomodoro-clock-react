@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=B612+Mono&display=swap');
+
+#timer-length{
+    font-size: 1em;
+    text-align:justify;
+    font-family: 'B612 Mono', monospace;
+}
