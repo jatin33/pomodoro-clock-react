@@ -1,6 +1,6 @@
 - [learned Twitter Bootstrap](https://hackerthemes.com/bootstrap-cheatsheet/)
-\n
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Data sharing between siblings learnt as part of this project](https://towardsdatascience.com/passing-data-between-react-components-parent-children-siblings-a64f89e24ecf)
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
