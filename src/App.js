@@ -7,8 +7,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sessionDuration: null,
-      breakDuration: null
+      sessionDuration: 25,
+      breakDuration: 5
     }
     this.updateSessionGlobal = this.updateSessionGlobal.bind(this);
     this.updateBreakGlobal = this.updateBreakGlobal.bind(this);
@@ -34,13 +34,13 @@ class App extends React.Component {
           <div className="border rounded border-dark col-xs-3  p-2 mx-auto">
             <TimerLengthController
               type={'Session'}
-              defaultTime={25}
+              defaultTime={this.state.sessionDuration}
               timeHandler={this.updateSessionGlobal} />
           </div>
           <div className="border rounded border-dark col-xs-3  p-2 mx-auto">
             <TimerLengthController
               type={'Break'}
-              defaultTime={5}
+              defaultTime={this.state.breakDuration}
               timeHandler={this.updateBreakGlobal} />
           </div>
         </div>

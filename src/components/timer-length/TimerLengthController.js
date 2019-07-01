@@ -4,29 +4,18 @@ import './TimerLengthController.css';
 class TimerLengthController extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            duration: this.props.defaultTime
-        }
         this.changeTimeDuration = this.changeTimeDuration.bind(this);
     }
 
-    componentDidMount(){
-        this.props.timeHandler(this.state.duration);
-    }
-
     changeTimeDuration(changeSign) {
-        let { duration } = this.state;
-        console.log(duration);
+        let { defaultTime } = this.props;
+        console.log(defaultTime);
         if (changeSign === '-') {
-            this.setState({
-                duration: --duration
-            })
+            --defaultTime;
         } else if (changeSign === '+') {
-            this.setState({
-                duration: ++duration
-            })
+            ++defaultTime;
         }
-        this.props.timeHandler(this.state.duration);
+        this.props.timeHandler(defaultTime);
     }
 
     render() {
@@ -42,7 +31,7 @@ class TimerLengthController extends React.Component {
                         </button>
                     </div>
                     <div className="col">
-                        {this.state.duration}
+                        {this.props.defaultTime}
                     </div>
                     <div className="col">
                         <button onClick={() => this.changeTimeDuration('-')}>
